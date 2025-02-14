@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Fact Generator</title>
+</head>
+<body>
+    <h1>Fun Fact</h1>
+    <p id="funFact">Click the button to see a fun fact!</p>
+    <button id="changeFactButton">Change Fun Fact</button>
+
+    <script>
+        const funFacts = [
+            "Honey never spoils.",
+            "A group of flamingos is called a 'flamboyance'.",
+            "Bananas are berries, but strawberries aren't.",
+            "Octopuses have three hearts.",
+            "Wombat poop is cube-shaped."
+        ];
+
+        document.getElementById('changeFactButton').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * funFacts.length);
+            document.getElementById('funFact').innerText = funFacts[randomIndex];
+        });
+    </script>
+</body>
+</html>
